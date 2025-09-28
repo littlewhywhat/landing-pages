@@ -15,8 +15,7 @@ type NavLink = {
 const links: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/products', label: 'Products' },
-  { href: '/privacy', label: 'Privacy' },
-  { href: '/terms', label: 'Terms' }
+  { href: '/blog', label: 'Blog' }
 ];
 
 export function Navbar() {
@@ -28,26 +27,34 @@ export function Navbar() {
   };
 
   return (
-    <header>
-      <Container px={{ initial: '4', sm: '5' }} py="4">
-        <Flex align="center" justify="between" gap="6" wrap="wrap">
+    <header className="site-header">
+      <Container px={{ initial: '4', sm: '5' }} py="3">
+        <Flex align="center" justify="between" gap="5" wrap="wrap">
           <Link href="/" aria-label="Toolz home">
-            <Text size="6" weight="bold">
+            <Text size="7" weight="bold" className="brand-gradient">
               Toolz
             </Text>
           </Link>
-          <Flex align="center" gap="5">
-            <Flex align="center" gap="4" wrap="wrap" asChild>
+          <Flex align="center" gap="4" wrap="wrap" justify="end">
+            <Flex align="center" gap="3" wrap="wrap" className="nav-shell">
               <nav aria-label="Primary">
-                <Flex align="center" gap="4" wrap="wrap">
+                <Flex align="center" gap="2" wrap="wrap">
                   {links.map((link) => {
                     const isActive = normalizedPath === link.href;
                     return (
-                      <Link key={link.href} href={link.href} aria-current={isActive ? 'page' : undefined}>
-                        <Text color={isActive ? 'violet' : 'gray'} weight={isActive ? 'bold' : 'medium'}>
+                      <Button
+                        key={link.href}
+                        asChild
+                        size="2"
+                        radius="full"
+                        variant={isActive ? 'solid' : 'ghost'}
+                        color={isActive ? 'violet' : 'gray'}
+                        highContrast={isActive}
+                      >
+                        <Link href={link.href} aria-current={isActive ? 'page' : undefined}>
                           {link.label}
-                        </Text>
-                      </Link>
+                        </Link>
+                      </Button>
                     );
                   })}
                 </Flex>
@@ -60,6 +67,7 @@ export function Navbar() {
               onClick={handleInstallClick}
               color="violet"
               highContrast
+              radius="full"
             >
               <Link href="/products/sidethreadgpt">
                 Get SideThreadGPT

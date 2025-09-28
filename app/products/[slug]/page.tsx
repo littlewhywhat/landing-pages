@@ -75,17 +75,17 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   return (
     <main>
-      <Container px={{ initial: '4', sm: '5' }} py={{ initial: '6', sm: '8' }}>
-        <Flex gap="2" align="center" mb="4" wrap="wrap">
+      <Container px={{ initial: '4', sm: '5' }} py={{ initial: '7', sm: '9' }}>
+        <Flex gap="2" align="center" mb="5" wrap="wrap">
           <Link href="/">Home</Link>
           <Text color="gray">/</Text>
           <Link href="/products">Products</Link>
           <Text color="gray">/</Text>
           <Text>{product.name}</Text>
         </Flex>
-        <Flex direction="column" gap="5" mb="6">
-          <Box>
-            <Heading size="8" mb="2">
+        <Flex direction="column" gap="6" mb="7">
+          <Box style={{ maxWidth: 780 }}>
+            <Heading size="8" mb="3">
               {product.seo?.title ?? `${product.name} – ${product.tagline}`}
             </Heading>
             <Text color="gray" size="4">
@@ -113,9 +113,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <ScreenshotCarousel screenshots={product.screenshots} productSlug={product.slug} />
           </Box>
         )}
-        <Separator size="4" mb="6" />
-        <Grid columns={{ initial: '1', md: '2' }} gap="6">
-          <Box>
+        <Separator size="4" mb="7" />
+        <Grid columns={{ initial: '1', md: '2' }} gap="7">
+          <Box style={{ maxWidth: 680 }}>
             {product.overview?.map((paragraph, index) => (
               <Text as="p" size="4" mb="4" key={index}>
                 {paragraph}
@@ -126,9 +126,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <Heading size="5" mb="3">
               Key features
             </Heading>
-            <Flex direction="column" gap="3">
+            <Flex direction="column" gap="4">
               {product.features?.map((feature) => (
-                <Box key={feature.title} p="4" style={{ borderRadius: 16, background: 'var(--gray-a2)' }}>
+                <Box
+                  key={feature.title}
+                  p="4"
+                  style={{
+                    borderRadius: 18,
+                    background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.12), rgba(56, 189, 248, 0.08))'
+                  }}
+                >
                   <Heading size="4" mb="1">
                     {feature.title}
                   </Heading>
@@ -141,7 +148,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </Box>
         </Grid>
         {product.faqs && product.faqs.length > 0 && (
-          <Box mt="8">
+          <Box mt="9">
             <Heading size="5" mb="4">
               FAQ
             </Heading>

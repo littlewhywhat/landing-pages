@@ -10,13 +10,13 @@ export default function HomePage() {
     <main>
       <Box position="relative" style={{ overflow: 'hidden' }}>
         <div className="bg-gradient-subtle" aria-hidden="true" />
-        <Container px={{ initial: '4', sm: '5' }} py={{ initial: '8', sm: '9', lg: '10' }}>
-          <Flex direction="column" gap="6" align="start">
-            <Box>
+        <Container px={{ initial: '4', sm: '5' }} py={{ initial: '7', sm: '8', lg: '9' }}>
+          <Flex direction="column" gap="5" align="start">
+            <Box style={{ maxWidth: 640 }}>
               <Heading size="9" mb="3">
                 Productive tools for your flow
               </Heading>
-              <Text size="5" color="gray" mb="4">
+              <Text size="5" color="gray" mb="5">
                 simple focused apps only
               </Text>
               <Button size="3" asChild>
@@ -29,14 +29,14 @@ export default function HomePage() {
           </Flex>
         </Container>
       </Box>
-      <Container px={{ initial: '4', sm: '5' }} pb="8">
-        <Grid columns={{ initial: '1', sm: '2', lg: '3' }} gap="5">
+      <Container px={{ initial: '4', sm: '5' }} py={{ initial: '6', sm: '7', lg: '8' }}>
+        <Grid columns={{ initial: '1', sm: '2', lg: '3' }} gap="6">
           {products.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
         </Grid>
       </Container>
-      <Container px={{ initial: '4', sm: '5' }} pb="9">
+      <Container px={{ initial: '4', sm: '5' }} pb={{ initial: '8', sm: '9', lg: '10' }}>
         <EmailCapture />
       </Container>
     </main>

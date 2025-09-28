@@ -3,6 +3,7 @@ import { Container, Flex, Separator, Text } from '@radix-ui/themes';
 
 const footerLinks = [
   { href: '/products', label: 'Products' },
+  { href: '/blog', label: 'Blog' },
   { href: '/privacy', label: 'Privacy' },
   { href: '/terms', label: 'Terms' }
 ];
