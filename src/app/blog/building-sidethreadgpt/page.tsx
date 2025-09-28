@@ -63,7 +63,7 @@ export default function BuildingSideThreadGPT() {
               </Heading>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
-                We noticed that while AI tools like ChatGPT were incredibly powerful, using them required constant context switching. You'd be reading an article, encounter something complex, then have to open a new tab, navigate to ChatGPT, copy and paste content, and lose your flow entirely.
+                We noticed that while AI tools like ChatGPT were incredibly powerful, using them required constant context switching. You&apos;d be reading an article, encounter something complex, then have to open a new tab, navigate to ChatGPT, copy and paste content, and lose your flow entirely.
               </Text>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
@@ -75,7 +75,7 @@ export default function BuildingSideThreadGPT() {
               </Heading>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
-                The solution seemed obvious in hindsight: bring the AI directly to where you're already working. Instead of forcing users to leave their current context, we built SideThreadGPT to work seamlessly within any web page.
+                The solution seemed obvious in hindsight: bring the AI directly to where you&apos;re already working. Instead of forcing users to leave their current context, we built SideThreadGPT to work seamlessly within any web page.
               </Text>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
@@ -110,7 +110,7 @@ export default function BuildingSideThreadGPT() {
               </Text>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
-                <strong>Context-Aware Responses:</strong> The AI understands the webpage you're viewing and provides relevant, contextual assistance.
+                <strong>Context-Aware Responses:</strong> The AI understands the webpage you&apos;re viewing and provides relevant, contextual assistance.
               </Text>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
@@ -118,11 +118,11 @@ export default function BuildingSideThreadGPT() {
               </Text>
 
               <Heading size="5" weight="bold">
-                What's Next
+                What&apos;s Next
               </Heading>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>
-                SideThreadGPT is just the beginning. We're already working on additional productivity tools that follow the same philosophy: powerful functionality that integrates seamlessly into existing workflows.
+                SideThreadGPT is just the beginning. We&apos;re already working on additional productivity tools that follow the same philosophy: powerful functionality that integrates seamlessly into existing workflows.
               </Text>
 
               <Text size="3" style={{ lineHeight: '1.6' }}>

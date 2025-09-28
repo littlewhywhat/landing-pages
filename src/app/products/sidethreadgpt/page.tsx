@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: 'Context-Aware Responses',
-    description: 'SideThreadGPT understands the content you\'re viewing and provides relevant, contextual assistance.',
+    description: 'SideThreadGPT understands the content you&apos;re viewing and provides relevant, contextual assistance.',
   },
   {
     title: 'Privacy-First Design',

@@ -74,9 +74,9 @@ export default function Home() {
             About Toolz Studio
           </Heading>
           <Text size="4" color="gray" style={{ lineHeight: '1.6' }}>
-            We're passionate about creating tools that enhance productivity and streamline workflows. 
+            We&apos;re passionate about creating tools that enhance productivity and streamline workflows. 
             Our team focuses on building intuitive, powerful solutions that integrate seamlessly into your daily routine, 
-            whether you're browsing the web, managing tasks, or developing code.
+            whether you&apos;re browsing the web, managing tasks, or developing code.
           </Text>
           <Text size="3" color="gray">
             More tools coming soon. Stay tuned for updates on our latest projects.
