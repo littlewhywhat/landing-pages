@@ -2,14 +2,18 @@ import { posts } from '@/data/posts';
 import { Badge, Box, Flex, Heading, Link, Separator, Text } from '@radix-ui/themes';
 import type { Metadata } from 'next';
 import NextLink from 'next/link';
-import type { ReactNode } from 'react';
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = posts.find((entry) => entry.slug === params.slug);
+type BlogArticlePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((entry) => entry.slug === slug);
   if (!post) {
     return {
       title: 'Article not found — Toolz',
@@ -22,8 +26,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function BlogArticlePage({ params }: { params: { slug: string } }) {
-  const post = posts.find((entry) => entry.slug === params.slug);
+export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
+  const { slug } = await params;
+  const post = posts.find((entry) => entry.slug === slug);
 
   if (!post) {
     return (
@@ -70,7 +75,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
         </Flex>
 
         <Flex direction="column" gap="4">
-          {post.content.map((paragraph: ReactNode, index: number) => (
+          {post.content.map((paragraph, index) => (
             <Text key={index} size="4" color="gray" style={{ lineHeight: 1.7 }}>
               {paragraph}
             </Text>
