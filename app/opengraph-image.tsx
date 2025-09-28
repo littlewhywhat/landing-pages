@@ -30,7 +30,7 @@ export default function OpengraphImage() {
           Productive tools for your flow
         </div>
         <div style={{ fontSize: 28, opacity: 0.8, marginTop: 20 }}>
-          Simple, focused apps that keep you in the zone.
+          simple focused apps only
         </div>
       </div>
     ),

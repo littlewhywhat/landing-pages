@@ -17,7 +17,7 @@ export default function HomePage() {
                 Productive tools for your flow
               </Heading>
               <Text size="5" color="gray" mb="4">
-                Simple, focused apps that keep you in the zone.
+                simple focused apps only
               </Text>
               <Button size="3" asChild>
                 <Link href="/products">

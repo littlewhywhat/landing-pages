@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     default: 'Toolz — Productive tools for your flow',
     template: '%s | Toolz'
   },
-  description: 'Simple, focused apps that keep you in the zone.',
+  description: 'simple focused apps only',
   alternates: {
     canonical: '/' 
   },
   openGraph: {
     title: 'Toolz — Productive tools for your flow',
-    description: 'Simple, focused apps that keep you in the zone.',
+    description: 'simple focused apps only',
     url: siteUrl,
     siteName: 'Toolz',
     type: 'website'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Toolz — Productive tools for your flow',
-    description: 'Simple, focused apps that keep you in the zone.'
+    description: 'simple focused apps only'
   },
   icons: {
     icon: '/favicon.svg'
