@@ -9,13 +9,14 @@ import { ProductCTAButtons } from '@/components/ProductCTAButtons';
 import { absoluteUrl } from '@/lib/utils';
 
 export type ProductPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = products.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
   if (!product) {
     return { title: 'Product not found' };
   }
@@ -45,8 +46,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   };
 }
 
-export default function ProductDetailPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.slug === params.slug);
+export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
