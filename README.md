@@ -1,52 +1,29 @@
-# Next.js Vercel CI Template
+# Toolz — Productive tools for your flow
 
-Minimal Next.js 15 (App Router, TypeScript, Radix UI) starter with preview and production deployments on Vercel.
+This is a Next.js 15 (App Router) site for the Toolz product studio. It showcases the SideThreadGPT Chrome extension and
+future products with Radix Themes styling, TanStack Query providers, and Google Analytics instrumentation.
 
-## Prerequisites
-
-- Node 20
-- npm
-
-## Development
+## Getting started
 
 ```bash
-cp .env.example .env.local
 npm install
 npm run dev
 ```
 
-Home page shows an environment badge and links to the health check at `/api/health`.
+The site is available at `http://localhost:3000` with the following routes:
 
-## CI/CD
+- `/` — marketing home
+- `/products` — product catalog
+- `/products/sidethreadgpt` — SideThreadGPT details (SSR)
+- `/privacy` and `/terms`
 
-GitHub Actions deploys automatically:
+## Environment variables
 
-- **Preview**: on every pull request, comments the preview URL.
-- **Production**: on pushes to `main`, writes the production URL to the job summary.
+Create an `.env.local` file based on `.env.example` and set your production URL and GA4 ID.
 
-Add these repository secrets before running the workflows:
+## Assets
 
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
+Screenshot assets are lightweight SVG placeholders located in `public/screenshots/sidethreadgpt/`. They can be replaced with
+production-ready images (e.g., WebP) as needed.
 
-Find IDs with:
-
-```bash
-vercel org ls
-vercel projects ls
-```
-
-Optionally set `NEXT_PUBLIC_ENV` for custom environment labels.
-
-To link locally without secrets run:
-
-```bash
-npx vercel link
-```
-
-## Troubleshooting
-
-- Ensure all secrets are set in **Repository Settings → Secrets and variables → Actions**.
-- Verify organization and project IDs via the Vercel CLI.
-- Run `npm run ci` locally to replicate the CI build.
+Favicon and app icon assets are generated dynamically (SVG/OG) to avoid binary files in version control.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#111827" rx="48" />
+  <rect x="80" y="140" width="1280" height="620" rx="32" fill="#0f172a" stroke="#1f2937" stroke-width="4" />
+  <rect x="940" y="180" width="360" height="540" rx="24" fill="#1f2937" stroke="#22d3ee" stroke-width="4" />
+  <text x="990" y="250" font-family="Inter, sans-serif" font-size="48" fill="#bae6fd">Pinned side threads</text>
+  <line x1="980" y1="280" x2="1260" y2="280" stroke="#bae6fd" stroke-width="3" stroke-dasharray="12 12" />
+  <text x="140" y="240" font-family="Inter, sans-serif" font-size="54" fill="#e2e8f0">Reopen branches any time</text>
+</svg>
