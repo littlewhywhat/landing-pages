@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <rect width="1440" height="900" fill="#0b1120" rx="48" />
+  <rect x="120" y="160" width="1200" height="580" rx="28" fill="#111827" stroke="#312e81" stroke-width="4" />
+  <text x="200" y="260" font-family="Inter, sans-serif" font-size="56" fill="#c4b5fd">Organized workflow</text>
+  <text x="200" y="340" font-family="Inter, sans-serif" font-size="40" fill="#94a3b8">Keep your main chat on track while exploring tangents.</text>
+  <rect x="220" y="380" width="320" height="200" rx="18" fill="#1f2937" stroke="#4338ca" stroke-width="3" />
+  <rect x="580" y="380" width="320" height="200" rx="18" fill="#1f2937" stroke="#22d3ee" stroke-width="3" />
+  <rect x="940" y="380" width="320" height="200" rx="18" fill="#1f2937" stroke="#8b5cf6" stroke-width="3" />
+</svg>
