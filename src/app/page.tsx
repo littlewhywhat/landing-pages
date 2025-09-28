@@ -1,110 +1,86 @@
-import Hello from '@/components/Hello';
+import Hero from '@/components/Hello';
+import Navigation from '@/components/Navigation';
+import ProductsShowcase from '@/components/ProductsShowcase';
 import {
   Badge,
   Box,
   Button,
-  Card,
   Flex,
   Heading,
   Link,
   Separator,
   Text,
 } from '@radix-ui/themes';
-import NextLink from 'next/link';
 
 export default function Home() {
-  const env = process.env.NEXT_PUBLIC_ENV ?? 'preview';
-  const features = [
-    {
-      title: 'Radix Themes',
-      description: 'Preconfigured design system with accessible building blocks and consistent styling.',
-    },
-    {
-      title: 'CI-ready',
-      description: 'Linting and type-check scripts wired for Vercel deployments out of the box.',
-    },
-    {
-      title: 'API health route',
-      description: 'Monitor deployments quickly with a built-in health check endpoint.',
-    },
-  ];
-
   return (
     <Box
-      asChild
       style={{
         minHeight: '100vh',
         background:
           'radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.2), transparent 55%), radial-gradient(circle at 80% 0%, rgba(45, 212, 191, 0.18), transparent 60%), #09090b',
       }}
     >
+      <Navigation />
       <main>
+        {/* Hero Section */}
         <Flex
           direction="column"
           align="center"
           gap="6"
-          style={{ maxWidth: '960px', margin: '0 auto', padding: '96px 24px', textAlign: 'center' }}
+          style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 24px 64px', textAlign: 'center' }}
         >
-          <Badge color="jade" variant="surface">
-            Now shipping with Radix Themes
+          <Badge color="indigo" variant="surface">
+            Product Studio
           </Badge>
-          <Hello />
-          <Text size="4" color="gray">
-            Opinionated Next.js starter wired for Vercel — lean tooling, health checks, and a modern UI kit.
+          <Hero />
+          <Text size="5" color="gray" style={{ maxWidth: '600px' }}>
+            We build productive tools that seamlessly integrate into your workflow, helping you achieve more with less effort.
           </Text>
 
-          <Flex gap="4" wrap="wrap" justify="center">
+          <Flex gap="4" wrap="wrap" justify="center" mt="4">
             <Button size="3" asChild>
-              <NextLink href="/api/health">Check API Health</NextLink>
+              <Link href="#products">Explore Products</Link>
             </Button>
             <Button size="3" variant="soft" asChild>
-              <Link href="https://nextjs.org/docs" target="_blank" rel="noreferrer">
-                Next.js Docs
-              </Link>
+              <Link href="/blog">Read Our Blog</Link>
             </Button>
           </Flex>
+        </Flex>
 
-          <Card
-            variant="surface"
-            size="4"
-            style={{
-              width: '100%',
-              maxWidth: '520px',
-              background:
-                'linear-gradient(135deg, rgba(14, 165, 233, 0.18), transparent 60%), rgba(15, 23, 42, 0.85)',
-            }}
-          >
-            <Flex direction="column" gap="3" align="center">
-              <Badge color="blue" variant="soft">
-                Active Environment
-              </Badge>
-              <Heading size="6" weight="bold">
-                {env.toUpperCase()}
-              </Heading>
-              <Text size="2" color="gray">
-                Tailor your deployment previews with <code>NEXT_PUBLIC_ENV</code>.
-              </Text>
-              <Separator orientation="horizontal" size="4" my="1" />
-              <Text size="2" color="gray">
-                Deploy to Vercel and your environment will surface right here.
-              </Text>
-            </Flex>
-          </Card>
+        <Separator orientation="horizontal" size="4" />
 
-          <Flex gap="4" wrap="wrap" justify="center">
-            {features.map((feature) => (
-              <Card key={feature.title} size="3" variant="classic" style={{ width: '260px' }}>
-                <Flex direction="column" gap="2" align="start">
-                  <Heading as="h3" size="4">
-                    {feature.title}
-                  </Heading>
-                  <Text size="2" color="gray" align="left">
-                    {feature.description}
-                  </Text>
-                </Flex>
-              </Card>
-            ))}
-          </Flex>
+        {/* Products Section */}
+        <Flex
+          id="products"
+          direction="column"
+          align="center"
+          gap="8"
+          style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px' }}
+        >
+          <ProductsShowcase />
+        </Flex>
+
+        <Separator orientation="horizontal" size="4" />
+
+        {/* About Section */}
+        <Flex
+          direction="column"
+          align="center"
+          gap="6"
+          style={{ maxWidth: '800px', margin: '0 auto', padding: '80px 24px', textAlign: 'center' }}
+        >
+          <Heading size="6" weight="bold">
+            About Toolz Studio
+          </Heading>
+          <Text size="4" color="gray" style={{ lineHeight: '1.6' }}>
+            We&apos;re passionate about creating tools that enhance productivity and streamline workflows. 
+            Our team focuses on building intuitive, powerful solutions that integrate seamlessly into your daily routine, 
+            whether you&apos;re browsing the web, managing tasks, or developing code.
+          </Text>
+          <Text size="3" color="gray">
+            More tools coming soon. Stay tuned for updates on our latest projects.
+          </Text>
         </Flex>
       </main>
     </Box>
