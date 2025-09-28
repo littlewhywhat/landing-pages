@@ -4,8 +4,8 @@ import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 
 export const metadata: Metadata = {
-  title: 'Next.js Vercel Template',
-  description: 'Minimal template with Vercel CI/CD',
+  title: 'Toolz — Product Studio Hub',
+  description: 'Productive tools for your flow. Explore Toolz studio experiments, blog insights, and product launches.',
   icons: { icon: '/favicon.svg' },
 };
 
