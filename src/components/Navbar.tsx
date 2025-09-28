@@ -47,9 +47,9 @@ export function Navbar() {
                         asChild
                         size="2"
                         radius="full"
-                        variant={isActive ? 'solid' : 'ghost'}
+                        variant={isActive ? 'solid' : 'soft'}
                         color={isActive ? 'violet' : 'gray'}
-                        highContrast={isActive}
+                        highContrast
                       >
                         <Link href={link.href} aria-current={isActive ? 'page' : undefined}>
                           {link.label}
